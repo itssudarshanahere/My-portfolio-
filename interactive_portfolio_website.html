@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudarshana V.R | Portfolio</title>
+
+  <!-- AOS Scroll Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #fdfbfb, #ebedee);
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    nav h2 { color: #6c63ff; }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header span { color: #6c63ff; }
+
+    header p {
+      margin: 15px 0;
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      background: #6c63ff;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+      display: inline-block;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover { background: #554ee8; }
+
+    section { padding: 90px 10%; }
+
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-card, .project {
+      padding: 25px;
+      background: #f7f7ff;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover, .project:hover {
+      transform: translateY(-8px);
+    }
+
+    .project h3 { color: #6c63ff; margin-bottom: 10px; }
+
+    form {
+      display: grid;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      nav { padding: 15px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Sudarshana</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home" data-aos="fade-up">
+    <h1>Hi, I'm <span>Sudarshana V.R</span></h1>
+    <p>B.Tech AI & Data Science | Aspiring AI Engineer</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </header>
+
+  <section id="about">
+    <div class="card" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p style="text-align:center; line-height:1.8">
+        I am an Artificial Intelligence & Data Science student passionate about building
+        intelligent, scalable and user-focused solutions. I actively seek paid internships
+        and real-world problem solving opportunities.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="card" data-aos="zoom-in">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Machine Learning</div>
+        <div class="skill-card">HTML, CSS, JavaScript</div>
+        <div class="skill-card">SQL & Databases</div>
+        <div class="skill-card">Data Analysis</div>
+        <div class="skill-card">UI/UX Fundamentals</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="card" data-aos="fade-left">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <h3>AI Chatbot</h3>
+          <p>NLP based chatbot using Python</p>
+        </div>
+        <div class="project">
+          <h3>Student Data Analysis</h3>
+          <p>Performance insights using Pandas</p>
+        </div>
+        <div class="project">
+          <h3>Interactive Portfolio</h3>
+          <p>Responsive website with animations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card" data-aos="flip-up">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sudarshana V.R | All Rights Reserved</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1200, once: true });</script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){ emailjs.init("YOUR_PUBLIC_KEY"); })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+        .then(() => alert("Message sent successfully! 🚀"))
+        .catch(() => alert("Failed to send message ❌"));
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
